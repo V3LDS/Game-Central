@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Central</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #gameContainer {
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #000;
+            display: none;
+        }
+        #titleScreen, #highScoreScreen {
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        button {
+            background-color: #FF9800;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin: 10px auto;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+        }
+        #highScoreScreen {
+            display: none;
+        }
+        #scoreList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #snakeScoreScreen, #crossyScoreScreen {
+            display: none;
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="titleScreen">
+            <h1>Game Central</h1>
+            <button id="snakeButton">Snake</button>
+            <button id="crossyRoadButton">Crossy Road</button>
+            <button id="highScoresButton">High Scores</button>
+        </div>
+        <div id="highScoreScreen" style="display: none;">
+            <h2>High Scores</h2>
+            <button id="snakeScoresButton">Snake Scores</button>
+            <button id="crossyScoresButton">Crossy Road Scores</button>
+            <button id="backButton">Back to Main Menu</button>
+        </div>
+        <div id="snakeScoreScreen" style="display: none;">
+            <h2>Snake High Scores</h2>
+            <div id="snakeScoreList"></div>
+            <button id="snakeScoreBackButton">Back to High Scores</button>
+        </div>
+        <div id="crossyScoreScreen" style="display: none;">
+            <h2>Crossy Road High Scores</h2>
+            <div id="crossyScoreList"></div>
+            <button id="crossyScoreBackButton">Back to High Scores</button>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400" style="display: none;"></canvas>
+    </div>
+    <script src="game_central.js"></script>
+</body>
+</html>
