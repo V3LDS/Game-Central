@@ -1,0 +1,33 @@
+{
+  "name": "game-central",
+  "version": "1.0.0",
+  "description": "Game Central with Snake and Crossy Road",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node build.js"
+  },
+  "author": "Joshua Veldsman",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.1.0",
+    "electron-builder": "^25.0.5",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.joshuaveldsman.gamecentral",
+    "productName": "Game Central",
+    "win": {
+      "target": "portable",
+      "sign": null
+    },
+    "mac": {
+      "target": "dmg",
+      "identity": null
+    }
+  },
+  "dependencies": {
+    "nw-builder": "^4.10.0"
+  },
+  "type": "module"
+}
