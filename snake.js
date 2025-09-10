@@ -138,10 +138,26 @@ function drawScore() {
 
 document.addEventListener('keydown', (e) => {
     switch (e.key) {
-        case 'ArrowUp': if (dy === 0) { dx = 0; dy = -1; } break;
-        case 'ArrowDown': if (dy === 0) { dx = 0; dy = 1; } break;
-        case 'ArrowLeft': if (dx === 0) { dx = -1; dy = 0; } break;
-        case 'ArrowRight': if (dx === 0) { dx = 1; dy = 0; } break;
+        case 'ArrowUp':
+        case 'w':
+        case 'W':
+            if (dy === 0) { dx = 0; dy = -1; }
+            break;
+        case 'ArrowDown':
+        case 's':
+        case 'S':
+            if (dy === 0) { dx = 0; dy = 1; }
+            break;
+        case 'ArrowLeft':
+        case 'a':
+        case 'A':
+            if (dx === 0) { dx = -1; dy = 0; }
+            break;
+        case 'ArrowRight':
+        case 'd':
+        case 'D':
+            if (dx === 0) { dx = 1; dy = 0; }
+            break;
     }
 });
 
